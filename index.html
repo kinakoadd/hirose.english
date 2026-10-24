@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>広瀬英語塾 | 英語に特化した個別指導塾</title>
+<meta name="description" content="広瀬英語塾は、「わからない」のその先へ進むための、英語特化の個別指導塾です。小学生から高校生まで、無料体験が1回あります。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1f3260;--blue:#3f77b9;--green:#4a7c5c;--orange:#e8823a;--cream:#f3eee3;
+  --bg:var(--cream);--bg2:#fbf9f3;--ink:#1f3260;--text:#2c3450;--line:#d9d2c2;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141b30;--bg2:#1b2440;--ink:#f3eee3;--text:#d6d9e4;--line:#2f3a5c;--navy:#9db8e6}}
+:root[data-theme="dark"]{--bg:#141b30;--bg2:#1b2440;--ink:#f3eee3;--text:#d6d9e4;--line:#2f3a5c;--navy:#9db8e6}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans JP",system-ui,"Hiragino Sans","Yu Gothic",sans-serif;line-height:1.9;font-size:16px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{white-space:nowrap;flex-shrink:0;text-decoration:none;line-height:1.1;display:block}
+.logo b{display:block;white-space:nowrap;font-size:22px;font-weight:900;letter-spacing:.12em;color:var(--ink)}
+.logo small{display:block;font-size:9.5px;letter-spacing:.24em;color:var(--ink);margin-top:5px;font-weight:500}
+.logo small::after{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--orange);margin-left:8px}
+nav{display:flex;gap:26px;font-size:14px;font-weight:500}
+nav a{text-decoration:none;color:var(--ink)}
+nav a:hover{color:var(--orange)}
+.tel{background:var(--navy);color:var(--bg);padding:8px 16px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+@media(max-width:760px){nav{display:none}}
+.hbtns{display:flex;gap:8px;align-items:center}
+.tel.ap{background:var(--orange);color:#fff}
+@media(max-width:560px){.hbtns .tel:not(.ap){display:none}.tel{padding:8px 12px;font-size:12px}}
+@media(max-width:420px){.logo b{font-size:21px}}
+
+.hero{padding:72px 0 64px}
+.hero h1{font-size:clamp(34px,7vw,68px);line-height:1.25;color:var(--ink);font-weight:900;letter-spacing:.04em;margin:0 0 28px}
+.hero h1 span{display:block}
+.hero h1 .dot{display:inline-block;width:.16em;height:.16em;border-radius:50%;background:var(--orange);margin-left:.08em}
+.hero p{max-width:34em;font-size:17px;margin:0 0 34px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;padding:15px 30px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px}
+.btn.o{background:var(--orange);color:#fff}
+.btn.o:hover{background:#d4712c}
+.btn.line{background:#fff;color:#1f3260}
+.btn.l{border:2px solid var(--navy);color:var(--ink)}
+.dots{display:flex;gap:10px;margin-top:56px}
+.dots i{width:14px;height:14px;border-radius:50%}
+.badges{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line);font-weight:700;color:var(--ink);font-size:15px}
+
+section{padding:76px 0}
+section.alt{background:var(--bg2)}
+h2{font-size:clamp(26px,4vw,36px);color:var(--ink);margin:0 0 36px;font-weight:900;letter-spacing:.05em;line-height:1.4}
+h2::after{content:"";display:block;width:44px;height:5px;background:var(--orange);border-radius:3px;margin-top:14px}
+h3{margin:0 0 8px;font-size:19px;color:var(--ink)}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.feat div{border-top:6px solid var(--c);padding-top:20px}
+.feat p{margin:0}
+@media(max-width:820px){.feat{grid-template-columns:1fr;gap:32px}}
+
+.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.course{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:28px}
+.course h3{font-size:20px}
+.course .tag{display:inline-block;font-size:13px;font-weight:700;color:#fff;background:var(--c);border-radius:6px;padding:1px 12px;margin-bottom:14px}
+.course ul{margin:0;padding-left:1.2em}
+@media(max-width:820px){.courses{grid-template-columns:1fr}}
+
+.tbl{width:100%;border-collapse:collapse}
+.tbl th,.tbl td{text-align:left;padding:16px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{width:8.5em;color:var(--ink);white-space:nowrap}
+.note{font-size:14px;margin-top:16px}
+.wide{overflow-x:auto}
+.free{display:flex;gap:18px;align-items:center;background:var(--navy);color:var(--bg);border-radius:18px;padding:26px 28px;margin-top:32px}
+.free strong{font-size:22px;white-space:nowrap}
+.free span{color:inherit}
+:root:not([data-theme="light"]) .free{color:#f3eee3}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .free{background:#2a3a6b}}
+@media(max-width:600px){.free{padding:22px}.free span{font-size:14px}.free{flex-direction:column;align-items:flex-start;gap:6px}}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@media(max-width:820px){.two{grid-template-columns:1fr;gap:28px}}
+.map{flex-direction:column;gap:4px;text-decoration:none;color:var(--ink);width:100%;border:0;aspect-ratio:4/3;border-radius:18px;background:repeating-linear-gradient(45deg,var(--bg2),var(--bg2) 12px,var(--bg) 12px,var(--bg) 24px);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;font-size:14px;padding:16px}
+
+.cta{text-align:center;background:var(--navy);color:#f3eee3;padding:80px 0}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .cta{background:#0e1428}}
+.cta h2{color:#f3eee3}
+.cta h2::after{margin:14px auto 0}
+.cta .big{font-size:clamp(30px,6vw,46px);font-weight:900;letter-spacing:.06em;display:block;margin:18px 0 6px;text-decoration:none}
+footer{padding:28px 0;font-size:13px;text-align:center;color:var(--text)}
+.study{background:#1f3260;color:#f3eee3;border-radius:22px;padding:40px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.study h2{color:#f3eee3;font-size:clamp(24px,4vw,32px);margin-bottom:12px}
+.study h2::after{display:none}
+.study .en{font-size:15px;letter-spacing:.2em;line-height:1.5;margin:0 0 14px;color:#9db8e6;font-weight:500}
+.study .time{margin:0;font-size:22px;font-weight:700;letter-spacing:.1em;color:var(--orange)}
+.study>p{margin:0}
+@media(max-width:700px){.study{grid-template-columns:1fr;padding:28px}}
+.map b{font-size:20px}.map em{font-style:normal;font-weight:700;color:var(--orange);margin-top:8px}
+.prof{display:block;max-width:640px}
+.prof h3{font-size:15px;letter-spacing:.2em;color:var(--orange);margin-bottom:16px}
+.prof ul{list-style:none;margin:0;padding:0}
+.prof li{padding:10px 0 10px 26px;border-bottom:1px solid var(--line);position:relative}
+.prof li::before{content:"";position:absolute;left:4px;top:1.2em;width:10px;height:10px;border-radius:50%;background:var(--c,var(--blue))}
+.prof li:nth-child(3n+2)::before{background:var(--green)}
+.prof li:nth-child(3n)::before{background:var(--orange)}
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chips span{padding:8px 22px;border-radius:999px;font-weight:700;color:#fff;background:var(--blue)}
+.chips span:nth-child(2){background:var(--green)}.chips span:nth-child(3){background:var(--orange)}
+.say{margin:0 0 48px;display:flex;align-items:center;gap:36px}
+.photo{flex:none;width:150px;height:150px;border-radius:50%;background:#e4e6ea;border:4px solid #1f3260;box-shadow:0 0 0 6px var(--bg),0 8px 22px rgba(31,50,96,.18);overflow:hidden}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 80%}
+.bubble{font-size:15px;position:relative;background:#fff;border:2px solid var(--navy);border-radius:22px;padding:24px 30px;color:#2c3450}
+.bubble::before{content:"";position:absolute;left:-12px;top:50%;width:20px;height:20px;background:#fff;border-left:2px solid var(--navy);border-bottom:2px solid var(--navy);transform:translateY(-50%) rotate(45deg)}
+.bubble b{display:block;font-size:clamp(20px,3.6vw,28px);color:#1f3260;line-height:1.5;margin-bottom:6px}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .bubble{background:var(--bg2);color:var(--text)}:root:not([data-theme="light"]) .bubble::before{background:var(--bg2)}:root:not([data-theme="light"]) .bubble b{color:var(--ink)}}
+@media(max-width:620px){.bubble{font-size:14px;padding:20px 22px}.say{flex-direction:column;align-items:flex-start;gap:28px}.bubble::before{left:60px;top:-12px;transform:rotate(135deg)}}
+@media(max-width:820px){.prof{grid-template-columns:1fr;gap:32px}}
+.who{display:flex;align-items:center;gap:18px;flex:none}
+.likes h3{font-size:12px;letter-spacing:.14em;color:var(--orange);margin:0 0 4px}
+.likes p{margin:0;font-size:13px;line-height:1.7;color:var(--text)}
+.bubble b{white-space:nowrap;font-size:clamp(17px,4.6vw,28px)}
+@media(max-width:600px){.tbl th{width:auto;padding-right:16px}}
+.ig{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none;margin-bottom:12px}
+.ig:hover{color:var(--orange)}
+.btn.igbtn{display:inline-flex;align-items:center;gap:8px;border:2px solid #f3eee3;color:#f3eee3}
+.btn.igbtn:hover{background:#f3eee3;color:#1f3260}
+.hero p.open{display:inline-block;background:var(--orange);color:#fff;font-weight:700;letter-spacing:.08em;font-size:16px;padding:6px 20px;border-radius:999px;margin:0 0 22px}
+.notice{background:var(--bg2);border-left:5px solid var(--orange);padding:16px 20px;margin:0 0 32px;font-size:15px;line-height:1.9;max-width:44em}
+.notice b{color:var(--ink);margin-right:6px}
+.notice a{color:var(--ink);font-weight:700}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="広瀬英語塾 トップへ">
+      <b>広瀬英語塾</b><small>HIROSE ENGLISH SCHOOL</small>
+    </a>
+    <nav aria-label="メインメニュー">
+      <a href="#about">塾の特長</a><a href="#profile">プロフィール</a><a href="#course">コース</a><a href="#fee">料金</a><a href="#study">自習室</a><a href="#info">塾案内</a><a href="#contact">お問い合わせ</a>
+    </nav>
+    <div class="hbtns"><a class="tel" href="https://lin.ee/TLmBSt4" target="_blank" rel="noopener">公式LINE</a><a class="tel ap" href="https://comiru.jp/hiroseeigojuku/customer/application/form?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio" target="_blank" rel="noopener">無料体験申し込み</a></div>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="notice"><b>【お知らせ】（2026/10/25）</b><br>現在は他の場所をお借りして<br>（木）（金）のみ指導しています。<br>教室openは<u>2027年2月</u><br>詳しくは<a href="https://lin.ee/TLmBSt4" target="_blank" rel="noopener">公式LINE</a>で<br>お問い合わせください。</div>
+    <h1><span>「わかる」って</span><span>うれしい。</span></h1>
+    <p>広瀬英語塾は、英語だけに向き合う個別指導塾です。宿題や定期テストから、英検・入試対策まで。<br>一人ひとりの「わからない」をほどいて自力で解く方法を身につけてもらいます。</p>
+    <div class="btns">
+      <a class="btn o" href="https://comiru.jp/hiroseeigojuku/customer/application/form?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio" target="_blank" rel="noopener">無料体験(1回)を申し込む</a>
+      <a class="btn l" href="#fee">料金を見る</a>
+    </div>
+    <div class="badges"><span>入会金無料</span><span>教材費なし</span><span>小学生〜高校生・浪人生</span><span>無料体験1回</span></div>
+    <div class="dots" aria-hidden="true">
+      <i style="background:#1f3260"></i><i style="background:#3f77b9"></i><i style="background:#4a7c5c"></i><i style="background:#e8823a"></i><i style="background:#e6dfcb;border:1px solid #d9d2c2"></i>
+    </div>
+  </div>
+</div>
+
+<section id="about" class="alt">
+  <div class="wrap">
+    <h2>英語に特化した<br>個別指導塾</h2>
+    <div class="feat">
+      <div style="--c:var(--blue)"><h3>英語だけに集中</h3><p>「英語だけは広瀬英語塾で」と選んでもらえる塾です。ほかの教科は学校や別の塾で、英語はここで。通ううちに英語への苦手意識が薄れます。</p></div>
+      <div style="--c:var(--green)"><h3>得点につながる指導</h3><p>生徒の理解度を見極め、点数に直結するポイントを押さえて教えます。<br>宿題・定期テスト・入試・検定まで柔軟に対応します。</p></div>
+      <div style="--c:var(--orange)"><h3>自力で解く方法を教える</h3><p>答えを教えるだけでなく、自分で解くための考え方と手順を身につける授業です。身につけた方法は、この先の<br>学びを支えます。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="profile">
+  <div class="wrap">
+    <h2>プロフィール</h2>
+    <div class="say">
+      <div class="who"><div class="photo" role="img" aria-label="塾長の顔写真"><img alt="" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUEBAQEAwUEBAQGBQUGCA0ICAcHCBALDAkNExAUExIQEhIUFx0ZFBYcFhISGiMaHB4fISEhFBkkJyQgJh0gISD/2wBDAQUGBggHCA8ICA8gFRIVICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/wAARCAEIAMsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6GoPIPbigHt2pT+Bp3JEwMCj+dGeKT04pDuLzj3pD1/pS9s5/KjigYe3Sko+vXtSUALSUpx9Paj9KAGnP0NB4FL6Uh+nFMBKT+VKOaPoKYDfp0puTxzx0Ap3bpijH44oAb07dOlJn2p3ccUh60AJSHoPalwfwpCcAnGR7UABHApp6UtIaAE6+1BJApe9N6nmkwDt6Uf56Uv8AL0o/CkBd4447dqT/AD0oo9ORQSBP5Cl65GPyoJyOelA/+tQAfgRR+PAo+vNHAU8c0FBjvSUp9xSHpmgBMce1HOKD2paAE+n40h6emKd269KTii4DcdOcUn06DindO3Sk/SncBvU9fwpTS036jimKwnGRxSHAPr/SlPJz0pp6j3oGAznrR19qD+YpCBx6UAJSfXr6UuO3SigBDgH3pMA0ueaTtzSAQeuKXNLScUgLlHfpSDnHOKcO+f8ACgkPw6UAYx60cAdc0o4HvQNB360lHc0uaBiHqKDn8KMjjHaj09KAGnk56UZ//XS0maADPHTBpO3pS8EHHpSDt9KAD8c0h/P+lLQRxmgBKbSn9cUdAMcU7gNPX2ph7U89eDikPOM/Si4DSew6d6Ug9qTHBpcDFMBpz3H40En/AOtTjkjpxTWGMdwRigBD1x04zRQOeOgoHH0oAOcfrSYWl/DikwKi4FxaU8ikBz05NKQefamSA70YA5z1pB1pcUDQvbpR6cYpOtHX2oGHc8flQRgdPyoxSc5wOB7UAH8qSj+lAJoAKTGBSnPekzQAuO+aTvjHFJnn6UfgKAA98DpSde1L0z6Un6CgBDj0pp4xkZpzHJppzkelNAJ7dMUfofSikJ5HHShgKf09KTv04o7UhOaLgHpR2pM/iKM8UgDofalxSZzzRuPrQBaH1x9KX/DpSegxS0EhS4pPoMUuMDjrQNB3BHFB496Ow4o470DDoPSkpetJwD6UAJmkP/1qXHf16UdKAE6D1xSD8qUc/wBaQgZwKAF7f0pCOMd6X8BmjvnOKAEBOMdOOBTaXvzyKCPQcUANPX60h/SlOcjjHak55yKLgNoPcfpS0h7n0oATsO1FGOlB6UAIeO34Uh7dBQT2z+FGfyFAB9Bx6ilx7UcAUn40AW80c+tA7elGD6cetBIUvpxSA49MUp5HFA0Lxg0Dp0ptOHSgYn19O1JSmigBP0pOvAPNHaop7i3s7Z7i5mSGJBku5AxQBL32+2aFB6Ac9OK8u13406BpzvBpNnNqUy8CThIh756n8q8q1f4q+L9QuXlGpTWkTcCG3yqKPT1P/wCqqSA+pehPP1Hp/hSlgGC8jtnBr4pfxtrEV21wup3G9jgsJXUn9a04fid4utoWlj1S4uImwdkrbunb270OIH2AxwQeozg0pHPXHfFeFeCvj1Z3jwaX4qtGs5GIVL5DmI89GHVevX+Ve5RTRzxiSJ1dG5BBzn3pWHYcR700gY9qd3pD+ftSsIZx1zj0ooHOeMCg8CgBKQ07j0pD0oAZgA9OaU0HrSHigAPTHYUZFBpOKALuDjBJ/KgFvQAetHOfp2pfX0oAMsP4Rj60mec449qD9aXPFABk9gv86TJ9s0ZwOtHXr1oAQt0GKU8gcHJo7+tJntggY7UAQz3EdrbSXM7iKGJd7ueAoA6185+O/G134nvmihZotNgOI4+x93ru/i94heC2tvDttKVa4/fXG087R90fof0rwy9njijJwFCjA7j6e9Wh2sjPupVQHeWbAzknaP8AGuY1DUHwQgK5PTOf/wBdX764YgM42jsCc4965iecSuyrmQscZqgYC6VpMyM0nPIB/wA4rsLSa3XQInSIlWfDZOccdK5G2028vZBHBbk5OAAK7L+yLqy8OCOaNgUfcV65qNLjSdjDuiuSyDAz0HHavWvhL8XptJurXwzr0glsHby7e6J+aDPRG9V/lXjd8W5ADLxkgjFZEkwR1fJCk8kHBFW0Lc/R2J1kQOvIP6e1Ke2BXk/wO8b/APCWeDWsL+XfqmlkQyEnmWPHyP7+n4V6sUX059MnjpWQrAOuOhpD0owAOOKaQMdT+dAB79KDjjsRTfbJINBGaAFBJ68UncdMdqTGG68Uv44oARuATjHFIPujilyfXPakCjHU/lQBeHajt7Udx6YoyPWgBKXtSUv6+tABnpTT1+lO9s008Ed+KAHA8ehpjsEiZ3O1FGSScY4/+tTsZHuK4j4o6wdF8EThQ4nuD5SYBGMjr+h/MUDSPBvFOuvrfiO/1IhiJZMRqecIOAPbp+tctI0eGlkkDEHAA6J7e9Qxyz3rnaDbWqfecj5356e1dDo/he+167RI4Ps9pH/EwwAPX61baRajfY44aRdaxclIozt7k9PrXYeH/h+juoMYIxyxAr0GDwxb6UixIpdB1OMAn1rqbe1hWzXyVA49Oa5J1W3odkKS3Zxtp4RsNNcskSl/UCqmvaZFPp0kWByMDIHFdjMkgbDHjtxWRfRDYc4OepxxXPzu+p08itY8H1fTJI90MmT/AHWHOOa4S5Dx3DQsMZPQ/wA69x1yzQlztBPXpXk3iKz2SmRVwwPIA616FOpzaHnVafK9Dsfgd4jfQfihpqmQiC8P2OQE4BDHj8iBX263ynBHOcH/AD+FfnHoN29jrlneRHa0M8cgPQjDD/Cv0Yim+0wRXAIxMiuPbIqpGNtBx5JzwO1IRgcU4getNJ4xUkjT+tIewFHYGkJ5wRgUAIOvTml7e9JnHsD3oyR/jQAc5HrTS8SnDOAe4zSnp71F5W/5sdfpQBpZ5Pel4o49MUdulABRjHFKOKKAE7ZpOKXPGaPfHFAACMjccAHJrwn4nWfiCCWKOWeQ2t3cyTCLdnzNuNre3Xj6e1e23LtsCq3JOAoGSf8AOa898X6De6342g06YMI2ZRDM4JVQo+6PyP51jUdmmdmGi2mjxrwzoE3iHWhCqtFa2pyxwck9zXuGneHIVjEFpGI1UYzyF+taPgrwXBp1tcKQpZpjyvfFaut24swYV3qoGflyP5VhOfMzpp07aHIa74SvUhLw+IbiNgMhCqkD8q4KXWfEehSCO8ig1C1BwZIwFYe/H+FaXia0E94tzZa7qun3I4BWdnjPsUbgiuLS/wDEVneiHWGj1C3ZsC6hXawyerr09Pzpbo1cWd3Z61aatAWhJVxwUIwRVe9BKMucGqulWEb3BvrddhAw+BhTTtRuW+ZYE3N6Gsytkctq9uVRjgnjtXk/iJAS/r2/OvUdTutfy3/EpWSPHOCT2rzPW5vMn/e2r28hOCGHFdNLRnJVVzkbRNt6FAwCcg/XHH61+iml/Lo1imQcW8fI/wB0V+emnQPda7Y20Yy00ixAAZzlwK/Q2yj8m2hhP/LKJUP/AAEY/pXUziexZ59M02nH0ph/SixmHSmtzSkg02kAdOO/elPSm5waCeDznFAAcY44GKTHufyoIyAP/wBVPDEDGF49xRYC51x2FL0+lJQM+1AAT096U9KQ59qKADBwOKXp70gOT1x7UoPB44oAltreO7u1t2uI4uAx3tggZxkCs7WdV0vTnVtQSSaOKUiCeJSQGAAyx6dxXCeOte/4RDx74c8SPpzXtrJaz2c4Em0ckEY7AjBPPqfWs7xV4i1DV7TT7PRljstIljFxbQqBJKoJyPMwTtzg/lWVelJxujehUSdrntOnQR21uCDgMc5HPX/9dZ3iKGN4S7OASM4HAq3BOW0eymbgtCjEfVen+fauP8TauFRt0gVVGCSeBxXFfSzPSp73OF1ZIQzAKCc1gx6fFc3I3R4J4BA5P+eKnvLqW9lKWqlwTy4HArX0jTrWGAz3GpLDODgLIcZoWh0svCySw0F1jKgBcYA6+9eai+k+2Tl2DFfujkA16d4hdbSw8oMsgkXJZeB0rym1KjUBG5wWOAD3oM7aGbf614sjlf8A4llnd2uMg25O4cdOa4vXbpdVs/tqRPDJb5E0My4ZD617DJpkRTeigA9ga4zxHoS3McqRgB3QpkADt0rWElcxnDQ818BQiX4gaNKcYhmExHrtOcfpX31Fho1YjBYZI9Pb9a+FfhxpV5N45gt/KZZ7bLEEdcEDH45FfdijaqjocAEen+f6e1dx5c9NAP0xSNwOKXPoMj2pDxyaZmMpD78UuQO/6UhOT60rAJzSZyfaikbgCkA7sQDj0qQBCoJqLOEOCM+pqMKjDO8c+9AWNP8AwowM9BQO9FAB+HNB7dqKQ0XAcMfX0o9cdqQZ7cjsKATnpTYGL4q8Nad4u0KTSdQLxqTujmjODG2Ov+f6Vx3h/wCH83hnUWla7WSBxl9jZMmBgLjHTjmvS+OTn2qum570IoGXbbz2UVr7ZqHKSoXndFydsaZEVOB5a4A7cV5T4+jkGnRLGSC0mTg9a9XmxtaDgBRgVw/iPTmugI9pKg59c14knqe7T0POtC8UM2sS+H38N3Es0CAtLDjGD0P61raneW6F0e3ZSOCsigY/zxWrdaI0D2/iDT5BFfWgw5xw6ejeo4H6UsXiXw5rFhd22sWkdvdxxlIyxABOfmbPrnH5VpfQ2StqcPqmv3M9otsAiiMYB6VzpZpvLyiiVTkyAYz/AIVo6rotsLh5LDVEnWNckgg/yrkdM8Qi61K4shatMkL7BPEcq1Ta60E3qenQ7Z9PWRMcjB9qyhp0+oajHa28e6SVtqgDP+f/AK1TWJnjsndhtjY5APUU2K/+x39veGd7UJJhJI13NuwfTt/hRFaomckonqOieA9F0SeCaGN2uYlAMp25PHX7ufXvXXE84/8ArVS0m7a/0m0vHILTxK5IxyMD/P8A+qrnfp0r00tEeHJ3Yh9+Kax4HGaU8jHakb3HTpVEjCeKTPPSijpyRxQAlIT0pSOPSk6UrAGFyMgHPam7FPPlD8qcOuT1/wA8U4LkZ2j8qGFy7k5NLntnFNycmjvx0pCuOPTFGMcZ5pM80ufb6UWC4cA+gpSab6Z+tBxTsMCeQD07U6yhDXplIwEHB/pUZPU1ct1MdmzHgscisqr5YmtFXkUb2fy5i3QA4qqEiuwcnoMgZ4qLUXGD6g1hm9ltz5kbA7eoPevLT7nqpdiLVZHsJm8vHluMYPSvNNbs4J2cqvl7jkjqD/h0rudT1WG6jIf5WHODwa5G82ybjuAHuea2TN4y5UcBdaBFLKy7IlDHJ2Agn3rS0+xt7NFjhiCKg6hQMf4VcuJIImHIJrofCXhG68TE3jyC30yNtjyA5Zzn7qj8uaer0RnKaWpkzy3dxZTz21lcXENsmZPIiL7eepx0rV+G/hXxFrc1xq/iFxb6A75t7IKA1x0GSSNwUYPHeva9N0200ayW00+AW8SjovVj6k96sE9+uea66dJR3PNq13LREQRI0RUAVUG1QMDAA6UuetDdvSkPPQ8Ct0cj1GnqPSmk+/50p4zxTTTASk9OeKUnvTeMUAHBFJnnGKAeaQ+9ADqcG4/+tTATxRj/ADmgC+RnJHJpQvTmlyMjtigdOOaRIAYNFLg5xjmqeo6ppuj2wudVvobKInCmVtu76DqelNJvRDZb6Z96aSOg57V494m+MdpP5mn+FZpIipAa+aMDJz0RWz+ZrpvBfxNtdZYadq6w2uqAYDINqTYHUen0qqkJQjzDhaTsehQWzSMGc4QduhPtUksq7ygwABgD0pBdK0RCHJ68dx61QZyS59B1HavKqVHJnpQpqBi6nMPnGc4PBrmTMzFxWjdT+bM65yAe1YU8nlTMAcA1z2OlIx9XkUg8c+orj724kUsEZgOgyc10mpSFmPf6VzdwuckrxTTsW9jm7yWYks0rH26CvSfhv8SdK0PSV0PV7dooklZ0uo/m+8c/Mvf6ivMtUcAEDqRzjtXNXl8LKFpScsB8oHc100m76HNVSsfXkPxK8FXfiFNBt9ft2u5I/MUk7UPfbuPG72rqMHAbBKkZBHOff3r86pbqWaRpZHJZjknAGf8AD/8AV6V0mjeP/GOisg03xJqFsq8ALKXTH+42VNeuqTaPHclc+7SSTzSevYV8z+H/ANobxJayLH4isLPVocYMkK/Z5h78fKfyr0TTvjx4HvnVLlb/AE9jwTLEGUf981LptDuj1E8nI59qQ9vasTS/GPhPW5Vi0vxFp91KRkRrKFc/ga3Su0kEEEdcis7NbjuR03jkenSnHrSfjQMb+lHU0p446U0kevNACkgDFHFCq0h2xqXb0Ayak+xXn/PrL/3waALNxcW9pbS3l3PHbW0IzJLKwVE+prz2X4z+ChPLFZSXGoCM4EkKqFY+26vBfHvjXW/GGoMt44MSfMlpkm3th2BH8bfWuQuIpba2SWS+bcq73kAxj0Vewrvhhv5jnlVS2PdvEHxu1Sfda6FYppgIwJpT5kh9x/CK8r1PWry/unvdVvpru4c4Mszl2H09PwrFFybuArK2LuFAwGMbhj9f/rVnyX6SQMhB56E4yK6IxjDZGTk5G2k4ckRnG49SOtXLPUX3MJCR5ZBBHBGD61z9hdBwjbc4OCM9K0JdygOmACeR0rRxUlqRFtPRntPhb4sfZIo7LXHZosYW7HOP96vVrfXLS501rq3uEljkTKOjAg8V8ZSXkkBJB4Y4IwOa1tG8VarpJY2F60SsctE3MZrxq+BvrA9WhiltI+ibKdnu5N54J4/OodURklOAa860f4lWyFTqdpJCTz5kPzqffHWugk8YeHtTdWg1OEsvIDMUx+FeTKhOLs0emqsHsWJrd5CTtxWNeWUrISB+GK128R+H7SENc6rbRnoAWBJ9uK5XV/iNpCKYtMga7kJwHYbUHv6miFGcnZIbqQirtmLrFtDZWrXV7JsjBwB/ePoPWvMdRuZdQuSQmyMHAQEcf41t6xql/rM73N7IWC8BBgKnsPSsy1hXyjwMsce1e1hsJy6yPHxGJ5tEZJtwgO8dOmT0piJlhhhjr0rQ1LaiBdoBHPIxVO3G4rgcE9ewr0OWxw3LccORnrn0FWYk2oxwAFHPbH+FSRkMhdvlROpPf2p5SN0RycqxycdqrlFzMhId0HkNExQZKHDEf4V6X4C+M2s+G54dN8QSS6no+Qn70lpYBxyjdSP9k+lebsyyuS6tFcLypYcke3r2qjduVbewAboR2rOVNNalxm0z70sb6z1PToNR0+4S6tLhA8UqHKsCP8/r6VMcc9P5Cvlz4JfECTQdfTw1qNwTpOoviIseIJj0I9AeAfqK+n7u5jsREZNpkkbCIenHU/5/pXnThys6k7otrAiQfaLtzHHjIAOC3/1qSOSCW1MyWyjLYjj5O761mXt0J5QJCWGASB39qWS5kVEhTChuCB/L9KzuWkdFa6nJHCEASMk4wgAxWit1I6hlJwa5uKKQqAPoB71ux4jjVGPKjFMTSPhKbYHGDwTk5HLe9Y+tLJN5UYx5RO5j2GP51oTMcFsjIGBVcqtzbiJTzH3J4r6GR5SMvVbl7a8066jPljZg+/NVLlvKvJFYABjkAdBmp9fiZ9PgyMvGwAx9RxVfUgRe/dAIAFcstDZal7TyyqSSFXrW3ERLENx6DjHasSyJaIAdcd+1asB3KVBxxjgVvDVGctGUL/5QAD3zjvVKOVlJIGRnBzxWhfIOGwcrxg1kIfnbnjOMZrKWjLRfNwWBKsAQOgFJDcyuhYtkAYJPGeaqK2CygZPQccVfSIohw2RnkAcVLin0KUmthJ5Wa0LAAnAJIznrSQLLI4BOUIyeQM1IcSW0g8vJ2jB7Dmp4cRwGZyBjgD1pwguwSk7EdwSkXlIBgcsBx+FT2cIC4IGDzVQASvuY53c5PSta3UrbZ+Xr1xW0TFnOa2PnDYGCMc9RVOxkAh68A4H5VoeIApQsvA6EisvThviChec1m/iNE9DR1CVobS3hXgy8n8+lTI0hsCgCkheAQSDVTX0b7JaygYCDBI7VDFcyNZGaKTMkRBAPfp8vt/8AqovqJK5dtvIuYVV1SNpBvUIejD09Kp3sjPIN3OBg+pqATBCCpIVz5sZ7jJz/AI1YvR+9LD7rDeMfTpSZWxTildHUqSrIeCDjH+FfSfg74h3fiiys5NTl3ahZRLbyEcBwvR/xwM+4NfNK/LI2Oo7V0fhTWW0bXYpgx8uU+W4B4we/8vzrlqxuro2pydz7F0qU3Cm4bkk5Ge1atsPNvVBOec+1c54PulvdHRlbJHHH8q6+0g2yByAPevOszrNmzjAcsegGajllYysfepcmO246mquAec1SJR8M3J8udo24PUioIfkmY8AYxgUmqP5eog84YdTxmmLkRM4B2561773PMS0GalbmXyNuCHcAjPuP8Ky9R+e+kbIJJ4wa6JE81IiP4DkjI9K5+dA98wAPJyQMECpmroqD6FnTkYqxx1HFblqgPt9KzraFY0AKtnsOla1qAPm4BJwB6VVNEzKV6CZSNuSRgd81gEYY/LgZzxiuluI/nZtpIIOD+FYAUMrKq5IPWs6m5UWNjUtKox781o7cAAE4znA78VQt8JMwywI455rSRFNwqZGMc4HSoQ3uEUbM7xnkMuMAcCi9+UIq4AB46elSsSiFVOOSBycnpUV1+8CnGRj/AD/KriwbGwIuApIJxkgdBWuiDyhuPOOAD0rPtkCEkAAkccZq4mOfnwwP171rEzkY2sxfujtAP6ZrD0xtrshB4PNdNqao8B4yw6HHPSuTUmG7POAx4FZS3LWx0l1FHcacVZuAvArl4HkgluLPgF1yuR1I5H8q6GOT92oYk56Y7Vk62nlyxXEe0SKcgjvjFQ2NblRSJLVlByYzuGR0B7frWkuJrCF2B3L8p5zWKsgE4P8ACxIIB4rZsgHtJI+gByAO/v7UlqNrUpSEJcgf3hUqnsCcEdR1FRXQ2OsnQZ6CpGYGJWUYP5VL7FI+kfgt4la6hexmP7xVBHOc8f8A6q+gbRd8ansec18g/BaST/hMlgUnBQtj2/zivr3TSwtQT1HFcE1aR1p6F2YZQAcDpihIxsHyj8qnRQ65OCB2qQK2PlUAfSsdykfn3rhBijnUkHOOabbFZYFGc5OcDtRRXvS3PN6Fy1O65EWcFgQBj2pIdMSGRjPkEnkkCiiqexMRLuePbGIxtABBBOau2OWRTjJHPtRRVQ3FLYS5UkyFScYwQOOMVjpGqxSEEgYwARnNFFZ1NxxIIoigaZhkHkDoams3bzRuBO49e1FFYmjLsgjX5CSWDHHtkf8A1qqKxaFAoyM4J/E0UU4iZdiIADYK54xTwfnOMAdefSiitlsZsjnAkUAdDxXL6hb4n3KPunj3oorKZcSaCcbV3HBHajVEE9mHjO5lO4AUUVPQrqc7IPlJj6enp/nmtbS5wfNTPG0Yx2ooqIlPYfdRb43HBOMioIZFe1BIyehFFFDGj1v4CKr/ABMZSQdtnIR+Y/xr7AtYSsAH6CiiuOtudENjQijYDbjGa0EiXYPl/WiisEaH/9k="></div>
+        <div class="likes"><h3>好きなこと</h3><p>英語<br>珈琲<br>植物</p></div></div>
+      <div class="bubble"><b>「わかる」って楽しい！</b><span style="white-space:nowrap">そう思える経験を、広瀬英語塾で</span><br>重ねましょう。</div>
+    </div>
+    <div class="prof">
+      <div>
+        <h3>経歴</h3>
+        <ul>
+          <li>小・中学校教諭・塾講師歴10年以上</li>
+          <li>小・中・高校教員免許所持</li>
+          <li>英検準1級取得</li>
+          <li>オーストラリア留学</li>
+          <li>JICAマレーシア派遣プログラム</li>
+          <li>ニュージーランド留学</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="course" class="alt">
+  <div class="wrap">
+    <h2>コース</h2>
+    <div class="courses">
+      <div class="course" style="--c:var(--green)"><span class="tag">小学生</span><h3>はじめての英語</h3><ul><li>英語に親しむ基礎づくり</li><li>アルファベット・単語</li><li>中学英語への準備</li></ul></div>
+      <div class="course" style="--c:var(--blue)"><span class="tag">中学生</span><h3>定期テスト・受験対策</h3><ul><li style="white-space:nowrap">学校の授業・宿題のフォロー</li><li>定期テストで点を伸ばす</li><li>高校入試・英検対策</li></ul></div>
+      <div class="course" style="--c:var(--orange)"><span class="tag">高校生・浪人生</span><h3>大学受験・検定対策</h3><ul><li>読解・文法・語彙の強化</li><li>共通テスト・二次試験対策</li><li>英検・TOEICなど検定対策</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="fee">
+  <div class="wrap">
+    <h2>料金・授業時間</h2>
+    <div class="wide">
+    <table class="tbl">
+      <tr><th>授業料</th><td>60分 4,000円<br>(全学年共通)</td></tr>
+      <tr><th>入会金</th><td>無料</td></tr>
+      <tr><th>教材費</th><td>なし<br>(学校の教材を使用)<br>※英検・TOEIC対策は別途</td></tr>
+      <tr><th>授業時間<br>(火〜金)</th><td>①15:00〜16:00<br>②16:45〜17:45<br>③18:00〜19:00</td></tr>
+    </table>
+    </div>
+    <div class="free"><strong>無料体験 1回</strong><span><span style="white-space:nowrap">体験のあとで、入会するかどうかを</span><br>ゆっくり決められます。</span></div>
+  </div>
+</section>
+
+<section id="study">
+  <div class="wrap">
+    <div class="study">
+      <div>
+        <p class="en">Monday<br>STUDY ROOM</p>
+        <h2>毎週月曜日は<br>自習室開放</h2>
+        <p class="time">15:00 〜 20:00</p>
+      </div>
+      <p>月曜日は、ドリンク購入で、<span style="white-space:nowrap">自習室を利用いただけます。</span><br>学校の宿題やテスト勉強にどうぞ。</p>
+    </div>
+  </div>
+</section>
+
+<section id="info">
+  <div class="wrap two">
+    <div>
+      <h2>塾案内</h2>
+      <table class="tbl">
+        <tr><th>塾名</th><td>広瀬英語塾</td></tr>
+        <tr><th>住所</th><td>〒692-0404<br>島根県安来市広瀬町<br>広瀬932</td></tr>
+        <tr><th>公式LINE</th><td><a href="https://lin.ee/TLmBSt4" target="_blank" rel="noopener">友だち追加はこちら</a></td></tr>
+        <tr><th>Instagram</th><td><a href="https://www.instagram.com/yasugi.hirose.english_school/" target="_blank" rel="noopener">フォローはこちら</a></td></tr>
+        <tr><th>営業時間</th><td><div style="white-space:nowrap">月曜日<br>(自習室利用のみ)<br>15:00〜20:00</div><div style="margin-top:16px;white-space:nowrap">火曜日〜金曜日<br>(個別指導のみ)<br>15:00〜19:00</div></td></tr>
+      </table>
+    </div>
+    <div>
+      <a class="map" href="https://maps.app.goo.gl/EEY5EXuCahiegjot6" target="_blank" rel="noopener" aria-label="Googleマップで広瀬英語塾の場所を開く">
+        <svg viewBox="0 0 24 24" width="56" height="56" aria-hidden="true"><path fill="#e8823a" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg>
+        <b>広瀬英語塾</b><span>島根県安来市広瀬町<br>広瀬932</span><em>Googleマップで開く →</em>
+      </a>
+      <p class="note"><a href="https://maps.app.goo.gl/EEY5EXuCahiegjot6" target="_blank" rel="noopener">Googleマップで開く</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="cta" id="contact">
+  <div class="wrap">
+    <h2>まずは無料体験から</h2>
+    <p>ご不明な点は、<br>公式LINEでお問い合わせください。</p>
+    <p style="white-space:nowrap">月曜日<br>(自習室利用のみ)<br>15:00〜20:00<br><span style="display:block;margin-top:14px">火曜日〜金曜日<br>(個別指導のみ)<br>15:00〜19:00</span></p>
+    <div class="btns" style="justify-content:center">
+      <a class="btn o" href="https://comiru.jp/hiroseeigojuku/customer/application/form?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio" target="_blank" rel="noopener">無料体験を申し込む</a>
+      <a class="btn line" href="https://lin.ee/TLmBSt4" target="_blank" rel="noopener">公式LINEを追加</a>
+    </div>
+    <p style="margin:40px 0 14px;font-weight:700">最新情報はInstagramをチェック</p>
+    <a class="btn igbtn" href="https://www.instagram.com/yasugi.hirose.english_school/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r="1" fill="currentColor" stroke="none"/></svg>Instagramを見る</a>
+  </div>
+</div>
+<footer>
+  <a class="ig" href="https://www.instagram.com/yasugi.hirose.english_school/" target="_blank" rel="noopener" aria-label="広瀬英語塾のInstagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r="1" fill="currentColor" stroke="none"/></svg>Instagram</a>
+  <div>© 広瀬英語塾 HIROSE ENGLISH SCHOOL</div>
+</footer>
+</body>
+</html>
